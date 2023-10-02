@@ -15,7 +15,7 @@ export default function App() {
     localStorage.setItem("ITEMS", JSON.stringify(todos))
   }, [todos])
 
-  function addTodo(title) {
+  function addTodo(title: string) {
     setTodos(currentTodos => {
       return [
         ...currentTodos,
@@ -24,9 +24,9 @@ export default function App() {
     })
   }
 
-  function toggleTodo(id, completed) {
+  function toggleTodo(id: string, completed: boolean) {
     setTodos(currentTodos => {
-      return currentTodos.map(todo => {
+      return currentTodos.map(todo: => {
         if (todo.id === id) {
           return { ...todo, completed }
         }
