@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import { NewTodoForm } from "./NewTodoForm"
-import "./styles.css"
+
 import { TodoList } from "./TodoList"
+
 
 export default function App() {
   const [todos, setTodos] = useState(() => {
@@ -26,7 +27,7 @@ export default function App() {
 
   function toggleTodo(id: string, completed: boolean) {
     setTodos(currentTodos => {
-      return currentTodos.map(todo: => {
+      return currentTodos.map(todo => {
         if (todo.id === id) {
           return { ...todo, completed }
         }
@@ -36,7 +37,7 @@ export default function App() {
     })
   }
 
-  function deleteTodo(id) {
+  function deleteTodo(id: string) {
     setTodos(currentTodos => {
       return currentTodos.filter(todo => todo.id !== id)
     })
@@ -44,6 +45,9 @@ export default function App() {
 
   return (
     <>
+    <div>
+      
+    </div>
       <NewTodoForm onSubmit={addTodo} />
       <h1 className="header">Todo List</h1>
       <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
