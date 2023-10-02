@@ -1,23 +1,14 @@
-// import React from 'react'
-// import ReactDOM from 'react-dom/client'
-// import App from './App.tsx'
-// import './index.css'
-
-// ReactDOM.createRoot(document.getElementById('root')!).render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-// )
-// src/main.tsx or src/index.tsx
-
+import './styles.css'
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import AppRouter from './Router';
-import './index.css';
 
-ReactDOM.render(
+const domNode = document.getElementById('root');
+const root = createRoot(domNode!);
+
+root.render(
   <React.StrictMode>
     <AppRouter />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
