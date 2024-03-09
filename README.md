@@ -29,3 +29,4 @@ This project created while learning ReactJS hook from WebDevSimplified video - h
 ## Reference
 - [Learn React With This One Project - Web Dev Simplified](https://www.youtube.com/watch?v=Rh3tobg7hEo)
 - [Add Tailwindcss to React](https://tailwindcss.com/docs/guides/create-react-app)
+- react.dev
